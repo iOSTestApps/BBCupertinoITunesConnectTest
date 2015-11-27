@@ -14,6 +14,7 @@
 		836B44251C0911E4004CB8DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836B44231C0911E4004CB8DF /* LaunchScreen.storyboard */; };
 		836B44301C0911E4004CB8DF /* BBCupertinoITunesConnectTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B442F1C0911E4004CB8DF /* BBCupertinoITunesConnectTestTests.swift */; };
 		836B443B1C0911E4004CB8DF /* BBCupertinoITunesConnectTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B443A1C0911E4004CB8DF /* BBCupertinoITunesConnectTestUITests.swift */; };
+		836B444E1C091309004CB8DF /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836B444D1C091309004CB8DF /* BuddyBuildSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		836B44361C0911E4004CB8DF /* BBCupertinoITunesConnectTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBCupertinoITunesConnectTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		836B443A1C0911E4004CB8DF /* BBCupertinoITunesConnectTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCupertinoITunesConnectTestUITests.swift; sourceTree = "<group>"; };
 		836B443C1C0911E4004CB8DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		836B44481C0912E4004CB8DF /* BBCupertinoITunesConnectTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BBCupertinoITunesConnectTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		836B444D1C091309004CB8DF /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836B444E1C091309004CB8DF /* BuddyBuildSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +81,7 @@
 		836B440E1C0911E3004CB8DF = {
 			isa = PBXGroup;
 			children = (
+				836B444D1C091309004CB8DF /* BuddyBuildSDK.framework */,
 				836B44191C0911E4004CB8DF /* BBCupertinoITunesConnectTest */,
 				836B442E1C0911E4004CB8DF /* BBCupertinoITunesConnectTestTests */,
 				836B44391C0911E4004CB8DF /* BBCupertinoITunesConnectTestUITests */,
@@ -103,6 +108,7 @@
 				836B44211C0911E4004CB8DF /* Assets.xcassets */,
 				836B44231C0911E4004CB8DF /* LaunchScreen.storyboard */,
 				836B44261C0911E4004CB8DF /* Info.plist */,
+				836B44481C0912E4004CB8DF /* BBCupertinoITunesConnectTest-Bridging-Header.h */,
 			);
 			path = BBCupertinoITunesConnectTest;
 			sourceTree = "<group>";
@@ -399,10 +405,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BBCupertinoITunesConnectTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.cupertino.BBCupertinoITunesConnectTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BBCupertinoITunesConnectTest/BBCupertinoITunesConnectTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -410,10 +423,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BBCupertinoITunesConnectTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.cupertino.BBCupertinoITunesConnectTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BBCupertinoITunesConnectTest/BBCupertinoITunesConnectTest-Bridging-Header.h";
 			};
 			name = Release;
 		};
